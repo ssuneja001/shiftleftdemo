@@ -1,2 +1,0 @@
-# shiftleftdemo
-Shift Left Demo
