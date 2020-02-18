@@ -1,0 +1,39 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "b8a24d7c-e0b1-4840-b0ae-a3c8fe307cc7": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 99,
+                    "y": 97
+                },
+                "z": 0
+            }
+        }
+    },
+    "Resources": {
+        "ELBAccessLoggingDisabled": {
+            "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
+            "Properties": {
+                "AccessLoggingPolicy":{
+                    "Enabled" : false,
+                    "S3BucketName" : "String"
+                },
+                "Listeners":{
+                    "InstancePort" : "1",
+                    "LoadBalancerPort" : "25",
+                    "Protocol" : "HTTP"
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "b8a24d7c-e0b1-4840-b0ae-a3c8fe307cc7"
+                }
+            }
+        }
+    }
+}
