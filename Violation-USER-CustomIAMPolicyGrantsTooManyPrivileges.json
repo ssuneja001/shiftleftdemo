@@ -1,0 +1,60 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "IAMUser1": {
+            "Type": "AWS::IAM::User",
+            "Properties": {
+                "LoginProfile" : {
+                    "Password" : "String",
+                    "PasswordResetRequired" : false
+                },
+                "UserName" : "ShiftLeftUser"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "07de0c79-4edf-4545-b3aa-573e4ab7ce32"
+                }
+            }
+        },
+        "IAMAcessKey1": {
+            "Type": "AWS::IAM::AccessKey",
+            "Properties": {
+                "Status" : "Active",
+                "UserName" : "ShiftLeftUser"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "db22f872-767a-4499-8e9b-ddbf46ae0b65"
+                }
+            }
+        },
+        "IAMAcessKey2": {
+            "Type": "AWS::IAM::AccessKey",
+            "Properties": {
+                "Status" : "Active",
+                "UserName" : "ShiftLeftUser"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "db22f872-767a-4499-8e9b-ddbf46ae0b65"
+                }
+            }
+        },
+        "MyCustomIAMPolicy": {
+            "Type" : "AWS::IAM::Policy",
+            "Properties" : {
+                "PolicyName" : "MyPolicy",
+                "PolicyDocument" : {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": "*",
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
